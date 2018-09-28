@@ -1,6 +1,8 @@
 SSH Users Sync
 =========
 
+[![Build Status](https://travis-ci.org/mergermarket/ansible-role-ssh-users-sync.svg?branch=master)](https://travis-ci.org/mergermarket/ansible-role-ssh-users-sync)
+
 Pulls public SSH keys onto EC2 instances.
 
 Requirements
