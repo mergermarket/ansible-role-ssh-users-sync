@@ -30,7 +30,3 @@
     name: S3_BUCKET
     value: "%S3_BUCKET_TEMPLATE%"
     cron_file: sync_ssh_users
-
-- name: pull image
-  docker_image:
-    name: "mergermarket/sync-ssh-users"
