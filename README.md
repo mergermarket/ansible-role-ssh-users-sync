@@ -1,7 +1,7 @@
 SSH Users Sync
 =========
 
-[![Build Status](https://travis-ci.com/mergermarket/ansible-role-ssh-users-sync.svg?branch=master)](https://travis-ci.com/mergermarket/ansible-role-ssh-users-sync)
+[![Deploy to Ansible Galaxy](https://github.com/mergermarket/ansible-role-ssh-users-sync/actions/workflows/deploy.yml/badge.svg)](https://github.com/mergermarket/ansible-role-ssh-users-sync/actions/workflows/deploy.yml)
 
 Pulls public SSH keys onto EC2 instances.
 
