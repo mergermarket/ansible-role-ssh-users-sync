@@ -22,6 +22,7 @@
 
 - name: Users-sync cron
   ansible.builtin.cron:
+    name: sync_ssh_users
     cron_file: sync_ssh_users
     user: root
     job: "/usr/bin/sync_ssh_users &>> /var/log/ssh_users.log"
