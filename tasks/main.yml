@@ -1,22 +1,28 @@
-- name: sudoers
-  copy:
+- name: Install Crontab
+  ansible.builtin.dnf:
+    name: cronie
+    state: present
+
+- name: Sudoers
+  ansible.builtin.copy:
     src: sudoers-wheel
     dest: /etc/sudoers.d/99-wheel
 
-- name: skel ssh
-  file:
+- name: Skel ssh
+  ansible.builtin.file:
     path: /etc/skel/.ssh
     state: directory
     mode: 0700
 
-- name: sync script
-  copy:
+- name: Sync script
+  ansible.builtin.copy:
     src: sync_ssh_users
     dest: /usr/bin/
     mode: 0755
 
-- name: users-sync cron
-  cron:
+- name: Users-sync cron
+  ansible.builtin.cron:
+    name: sync_ssh_users
     cron_file: sync_ssh_users
     user: root
     job: "/usr/bin/sync_ssh_users &>> /var/log/ssh_users.log"
