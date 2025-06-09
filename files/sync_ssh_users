@@ -1,5 +1,5 @@
 #!/bin/bash
-docker run --rm -e SSH_TEAMS -e S3_BUCKET \
+docker run --rm --name sync-ssh-users -e SSH_TEAMS -e S3_BUCKET \
     -v /home/:/home/ \
     -v /etc/:/etc/ \
     -v /var/spool/mail/:/var/spool/mail/ \
